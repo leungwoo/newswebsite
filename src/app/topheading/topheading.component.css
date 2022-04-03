@@ -1,0 +1,23 @@
+img {
+  border-radius: 5px;
+}
+.box {
+  padding: 10px 10px;
+  background-color: rgb(240, 240, 240);
+}
+.readbtn {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+.readbtn:hover {
+  color: var(--primary-color);
+}
+.box h5 {
+  font-size: 15px;
+}
+.heading {
+  font-weight: bold;
+}
