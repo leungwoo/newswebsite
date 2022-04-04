@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsapiserviceService } from '../service/newsapiservice.service';
+import { Article } from '../interfaces/crypto';
 
 @Component({
   selector: 'app-topheading',
@@ -9,12 +10,14 @@ import { NewsapiserviceService } from '../service/newsapiservice.service';
 export class TopheadingComponent implements OnInit {
   constructor(private _services: NewsapiserviceService) {}
   //to display data
-  toheadingDisplay: any = [];
+  public newsHeadingDisplay: Article[] = [];
 
   ngOnInit(): void {
-    this._services.topHeading().subscribe((result) => {
-      console.log(result);
-      this.toheadingDisplay = result.articles;
-    });
+    this._services
+      .getCryptoNewsHeading()
+      .subscribe(
+        (newsHeadingDisplay) =>
+          (this.newsHeadingDisplay = newsHeadingDisplay.articles)
+      );
   }
 }

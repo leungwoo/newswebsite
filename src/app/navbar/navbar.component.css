@@ -1,0 +1,24 @@
+.navbar-brand {
+  color: red;
+
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+.navbar-brand:hover {
+  background-color: white;
+  color: black;
+  text-decoration: underline;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: default;
+  transform: rotate(360deg);
+  transition: all 0.3s ease-in-out 0s;
+}
+.nav-link:hover {
+  padding: 5px 10px;
+  border-style: double;
+  border-radius: 10px;
+  font-style: italic;
+}
+
+/* //{ cursor: default; transform: rotate(360deg); transition: all 0.3s ease-in-out 0s; } */

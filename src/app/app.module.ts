@@ -7,9 +7,12 @@ import { AppComponent } from './app.component';
 import { TopheadingComponent } from './topheading/topheading.component';
 import { NewsapiserviceService } from './service/newsapiservice.service';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { SubscribeComponent } from './subscribe/subscribe.component';
+import { TechpageComponent } from './techpage/techpage.component';
 
 @NgModule({
-  declarations: [AppComponent, TopheadingComponent, NavbarComponent],
+  declarations: [AppComponent, TopheadingComponent, NavbarComponent, FooterComponent, SubscribeComponent, TechpageComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [NewsapiserviceService],
   bootstrap: [AppComponent],
