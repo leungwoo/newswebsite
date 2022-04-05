@@ -20,5 +20,14 @@
   border-radius: 10px;
   font-style: italic;
 }
-
+.navbar-dark .navbar-nav .nav-link.active:hover {
+  color: red;
+}
+.btnsub {
+  background-color: white;
+  padding: 10px 10px;
+  border-radius: 5px;
+  color: red;
+  cursor: pointer;
+}
 /* //{ cursor: default; transform: rotate(360deg); transition: all 0.3s ease-in-out 0s; } */

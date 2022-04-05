@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,8 +13,21 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
 import { TechpageComponent } from './techpage/techpage.component';
 
 @NgModule({
-  declarations: [AppComponent, TopheadingComponent, NavbarComponent, FooterComponent, SubscribeComponent, TechpageComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    TopheadingComponent,
+    NavbarComponent,
+    FooterComponent,
+    SubscribeComponent,
+    TechpageComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    LoadingBarHttpClientModule,
+  ],
+  entryComponents: [SubscribeComponent],
   providers: [NewsapiserviceService],
   bootstrap: [AppComponent],
 })
