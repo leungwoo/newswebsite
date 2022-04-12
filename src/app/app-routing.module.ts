@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { TechpageComponent } from './techpage/techpage.component';
+import { TopheadingComponent } from './topheading/topheading.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'topheading', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
-    path: 'topheading',
-    loadChildren: () =>
-      import('./topheading/topheading.module').then((m) => m.TopheadingModule),
+    path: 'home',
+    component: HomeComponent,
   },
-  {
-    path: 'techpage',
-    loadChildren: () =>
-      import('./techpage/techpage.module').then((m) => m.TechpageModule),
-  },
+  { path: 'topheading', component: TopheadingComponent },
+  { path: 'techpage', component: TechpageComponent },
+  { path: '**', component: PagenotfoundComponent },
 ];
 
 @NgModule({
