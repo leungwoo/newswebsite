@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { NewsapiserviceService } from './service/newsapiservice.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { SubscribeComponent } from './subscribe/subscribe.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { TechpageComponent } from './techpage/techpage.component';
@@ -21,7 +20,6 @@ import { TopheadingComponent } from './topheading/topheading.component';
     FooterComponent,
     TechpageComponent,
     TopheadingComponent,
-    SubscribeComponent,
     HighlightDirective,
     PagenotfoundComponent,
   ],
@@ -31,7 +29,7 @@ import { TopheadingComponent } from './topheading/topheading.component';
     HttpClientModule,
     LoadingBarHttpClientModule,
   ],
-  entryComponents: [SubscribeComponent],
+  entryComponents: [],
   providers: [NewsapiserviceService],
   bootstrap: [AppComponent],
 })
