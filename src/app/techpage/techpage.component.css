@@ -9,7 +9,7 @@ img {
   font-weight: bold;
 }
 .box {
-  background-color: rgb(240, 240, 240);
+  background-color: white;
   color: var(--secondary-color);
   padding: 10px 20px;
 }

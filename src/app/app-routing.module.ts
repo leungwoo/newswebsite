@@ -1,11 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TechpageComponent } from './techpage/techpage.component';
-import { TopheadingComponent } from './topheading/topheading.component';
 
 const routes: Routes = [
-  { path: 'topheading', component: TopheadingComponent },
-  { path: 'techpage', component: TechpageComponent },
+  { path: '', redirectTo: 'topheading', pathMatch: 'full' },
+  {
+    path: 'topheading',
+    loadChildren: () =>
+      import('./topheading/topheading.module').then((m) => m.TopheadingModule),
+  },
+  {
+    path: 'techpage',
+    loadChildren: () =>
+      import('./techpage/techpage.module').then((m) => m.TechpageModule),
+  },
 ];
 
 @NgModule({

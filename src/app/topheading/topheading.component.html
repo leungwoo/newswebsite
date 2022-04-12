@@ -1,8 +1,12 @@
 <div class="container-fluid mt-5">
   <div class="row">
     <h1 class="topstory mb-4">Top Crypto News</h1>
-    <div *ngFor="let art of newsHeadingDisplay" class="col-lg-3 mb-3">
-      <div class="box">
+    <div
+      *ngFor="let art of newsHeadingDisplay; index as i"
+      class="col-lg-3 mb-3"
+      appHighlight
+    >
+      <div class="box" *ngIf="i <= 7">
         <h5 class="heading">{{ art.title }}</h5>
         <img src="{{ art.urlToImage }}" width="100%" />
         <h5 class="mt-4 mb-3">{{ art.description }}</h5>
