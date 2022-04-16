@@ -1,0 +1,17 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.btn {
+  padding: 10px 10px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}
+.btn:hover {
+  color: black;
+}
+.card:hover {
+  margin-top: 15px;
+}

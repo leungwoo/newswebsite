@@ -12,7 +12,6 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { TechpageComponent } from './techpage/techpage.component';
 import { TopheadingComponent } from './topheading/topheading.component';
-
 @NgModule({
   declarations: [
     AppComponent,

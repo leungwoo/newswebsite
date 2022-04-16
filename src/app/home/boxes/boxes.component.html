@@ -1,0 +1,30 @@
+<!-- <div class="container">
+  <div class="row text-centered">
+    <div *ngFor="let hobby of hobbies" class="col-lg-3">
+      <img src="{{ hobby.urlImage }}" />
+      <h2>{{ hobby.title }}</h2>
+      <p>{{ hobby.description }}</p>
+    </div>
+  </div>
+</div> -->
+<div class="container-fluid"></div>
+<div class="row g-0.5">
+  <div
+    *ngFor="let hobby of hobbies"
+    class="card bg-dark text-white"
+    style="width: 20rem"
+  >
+    <img
+      src="{{ hobby.urlImage }}"
+      class="card-img mt-3 p-3"
+      alt="{{ hobby.urlImage }}"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ hobby.title }}</h5>
+      <p class="card-text">
+        {{ hobby.description }}
+      </p>
+      <button class="btn btn-sm">Read more</button>
+    </div>
+  </div>
+</div>

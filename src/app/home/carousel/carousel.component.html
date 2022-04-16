@@ -1,0 +1,50 @@
+<div class="container-fluid bg-dark text-centered text-light text-sm-centered">
+  <div
+    id="carouselExampleIndicators"
+    class="carousel slide carousel-fade"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-indicators d-none d-md-block d-lg-block">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+    </div>
+
+    <div class="carousel-inner">
+      <div class="d-sm-flex align-items-center">
+        <div>
+          <h2 class="lead">{{ webDev.name }}</h2>
+          <span style="color: red"
+            ><p>{{ webDev.title }}</p></span
+          >
+          <p class="lead">
+            {{ webDev.built }}
+          </p>
+          <button class="btn btn-lg">Contact</button>
+        </div>
+
+        <div
+          class="carousel-item active"
+          *ngFor="let image of webDev.imagesUrl; let i = index"
+          [ngClass]="{ active: i == 0 }"
+        >
+          <img
+            src="{{ image }}"
+            class="image-fluid w-40 d-none d-sm-block mb-5"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
